@@ -13,7 +13,7 @@ GROUP BY u.id;
 
 -- Questão 3)
 
-SELECT u.name AS writer, COUNT(t) AS testimonailCount
+SELECT u.name AS writer, COUNT(t) AS "testimonailCount"
 FROM users u 
 JOIN testimonials t
 ON t."writerId" = u.id
@@ -22,13 +22,13 @@ GROUP BY u.id ;
 
 -- Questão 4)
 
-SELECT MAX(salary) AS maximumSalary , r.name AS role
+SELECT MAX(salary) AS "maximumSalary" , r.name AS role
 FROM jobs j
 JOIN roles r
 ON r.id = j."roleId"
 WHERE j.active = true
 GROUP BY r.name
-ORDER BY maximumSalary ASC;
+ORDER BY "maximumSalary" ASC;
 
 -- Questão Bônus 
 
